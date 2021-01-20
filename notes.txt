@@ -1,0 +1,15 @@
+######################################################
+#                                                    #
+#    Author: Achileas Gebriel                        #
+#    Arch Linux Install script note, for better      #
+#    understanding the layout of the script          #
+#                                                    #
+######################################################
+
+=> Update the system clock: "timedatectl set-ntp true"
+=> Partition the disks: "cfdisk"
+	- swap partition SWAP
+	- efi partition if it doesn't exist /boot
+	- root partition for the operating system and everything /
+=> Format the partition: "mkfs.ext4 /dev/root_partition" "mkswap /dev/swap_partition"
+=> 
